@@ -1,0 +1,144 @@
+<div id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+  <!--begin::Main-->
+<app-header></app-header>
+  <div class="d-flex flex-column flex-root">
+      <!--begin::Page-->
+      <div class="d-flex flex-row flex-column-fluid page">
+          <!--begin::Aside-->
+          <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+              <app-sidemenu></app-sidemenu>
+          </div>
+          <!--end::Aside-->
+          <!--begin::Wrapper-->
+          <div class="d-flex flex-column flex-row-fluid wrapper rgcont" id="kt_wrapper">
+              <!--begin::Content-->
+            <app-notifications></app-notifications>
+
+            <div class="container">
+<div class="row">
+<div class="col-lg-6">
+  <!--begin::Card-->
+  <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+          <h3 class="card-title">View Restaurant Details</h3>
+      </div>
+      <!--begin::Form-->
+      <form class="form">
+          <div class="card-body">
+              <h3 class="font-size-lg text-dark font-weight-bold mb-6">1. Restaurant Info:</h3>
+              <div class="mb-15">
+                  <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Restaurant Name:</label>
+                      <div class="col-lg-6">
+                        <div class="form-control" >{{shop_name}}</div>
+
+                      </div>
+                  </div>
+
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Restaurant Link:</label>
+                    <div class="col-lg-6">
+                      <div class="form-control" >{{shop_name}}</div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Restaurant Logo:</label>
+                  <div class="col-lg-6">
+                     <img src="{{shoplogo}}" style="width: 100px;height: 100px;"
+                        alt="" />
+                  </div>
+               </div>
+
+
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Address :</label>
+              <div class="col-lg-6">
+                <div class="form-control" style="height: 60px;">{{address}}</div>
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Contact No:</label>
+              <div class="col-lg-6">
+                <div class="form-control" >{{shop_number}}</div>
+              </div>
+            </div>
+              </div>
+          </div>
+
+      </form>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <!--begin::Card-->
+  <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+          <h3 class="card-title">Adding Vendor Person Details</h3>
+      </div>
+      <!--begin::Form-->
+      <form class="form">
+          <div class="card-body">
+              <h3 class="font-size-lg text-dark font-weight-bold mb-6">2.Person Info:</h3>
+              <div class="mb-15">
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Admin Link:</label>
+                  <div class="col-lg-6">
+                    <div class="form-control"  style="height: 60px;">{{admin_link}}</div>
+                  </div>
+              </div>
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Admin Email:</label>
+                  <div class="col-lg-6">
+                    <div class="form-control" >{{vendor_email}}</div>
+                  </div>
+               </div>
+
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Admin Password:</label>
+                <div class="col-lg-6">
+                  <div class="form-control" >{{vendor_password}}</div>
+                </div>
+              </div>
+
+               <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">User name:</label>
+                      <div class="col-lg-6">
+                        <div class="form-control" >{{vendor_name}}</div>
+                      </div>
+                  </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Phone Number:</label>
+                    <div class="col-lg-6">
+                      <div class="form-control" >{{vendor_phone}}</div>
+                    </div>
+                </div>
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Docs:</label>
+                <div class="col-lg-6">
+                    <img src="{{person_doc}}" style="width: 35px;height: 35px;"
+                      alt="" />
+                </div>
+             </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+</div>
+</div>
+
+
+<app-footer></app-footer>
+</div>
+<!--end::Wrapper-->
+</div>
+<!--end::Page-->
+</div>
+<!--end::Main-->
+
+</div>

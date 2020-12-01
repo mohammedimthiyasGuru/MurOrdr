@@ -1,0 +1,88 @@
+<div id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+  <!--begin::Main-->
+<app-header></app-header>
+  <div class="d-flex flex-column flex-root">
+      <!--begin::Page-->
+      <div class="d-flex flex-row flex-column-fluid page">
+          <!--begin::Aside-->
+          <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+              <app-sidemenu></app-sidemenu>
+          </div>
+          <!--end::Aside-->
+          <!--begin::Wrapper-->
+          <div class="d-flex flex-column flex-row-fluid wrapper rgcont" id="kt_wrapper">
+              <!--begin::Content-->
+            <app-notifications></app-notifications>
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+  <!--begin::Entry-->
+  <div class="d-flex flex-column-fluid">
+      <!--begin::Container-->
+      <div class="container">
+          <!--begin::Example-->
+          <!--begin::Row-->
+          <div class="row">
+            <ng-container *ngFor="let item of orderlist; let i = index;">
+              <div class="col-lg-4" (click)="openorders(item)">
+                  <!--begin::Card-->
+                  <div class="card card-custom card-stretch">
+                      <div class="card-header cus">
+                          <div class="card-title cus">
+                              <h6 class="card-label cus left">Order Number:</h6>
+                              <h1 class="card-label cus right">#{{item.order_id}}</h1>
+                          </div>
+                      </div>
+                      <div class="card-body">
+
+                          <div class="cus-det">
+                              <h6>Customer Details:</h6>
+                              <h6 class="right">{{item.Customer_id.Customer_name}} - {{item.Customer_id.Customer_phone}}</h6>
+                          </div>
+                          <div class="order-det">
+                            <span>Order Details:</span><br>
+                            <ng-container *ngFor="let items of item.Item_detals[0].Data; let i = index;">
+                              <B>Item Title :</B>  {{items.Item_id.item_title}} ,
+                              <B>Item Desc :</B> {{items.Item_id.item_descri}},
+                                <B>Item Quantity :</B> {{items.quantity}},
+                            </ng-container>
+
+
+                          </div>
+                          <br>
+                          <div class="time-dur">
+                              <h6>Booking Date:</h6>
+                              <h6 class="right">{{item.booking_date | date:'yyyy-MM-dd HH:MM a' }}</h6>
+                          </div>
+                          <div class="time-dur">
+                            <h6>Order Status:</h6>
+                            <h6 class="right">{{item.order_status}}</h6>
+                        </div>
+                      </div>
+                  </div>
+                  <!--end::Card-->
+              </div>
+              </ng-container>
+          </div>
+          <!--end::Row-->
+          <!--end::Example-->
+      </div>
+      <!--end::Container-->
+  </div>
+  <!--end::Entry-->
+</div>
+
+
+
+<app-footer></app-footer>
+
+
+
+
+</div>
+<!--end::Wrapper-->
+</div>
+<!--end::Page-->
+</div>
+<!--end::Main-->
+
+</div>
